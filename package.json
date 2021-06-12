@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "node_example",
+  "version": "1.0.0",
+  "description": "a little project to finish a course about how to create a basic web app from scratch",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/famlo95/complements-insults.git"
+  },
+  "author": "Francisco Morales Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/famlo95/complements-insults/issues"
+  },
+  "homepage": "https://github.com/famlo95/complements-insults#readme"
+}
