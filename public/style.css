@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300&family=Delius&display=swap');
+
+:root {
+    --hate-color: black;
+    --love-color: white;
+    --container-padding: 0 1em 1.35em;
+    --outline-container: 0.1em solid;
+    --border-radius: 0.2em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--love-color);
+    font-size: 18px;
+    font-family: 'Comic Neue', 'Times New Roman', Times, serif;
+}
+
+button {
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: unset;
+}
+
+h1 {
+    text-align: center;
+    font-variant: small-caps;
+    margin-bottom: 1em;
+    letter-spacing: 0.1em;
+    font-family: 'Delius', 'Courier New', Courier, monospace;
+}
+
+h2 {
+    margin-bottom: 0.3em;
+}
+
+span {
+    height: 0.05em;
+    /* width: 1em; */
+    background-color: grey;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.love-container {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    background-color: var(--love-color);
+    padding: var(--container-padding);
+    width: 45%;
+    margin: auto;
+    border-radius: var(--border-radius);
+    outline: var(--outline-container) var(--hate-color);
+}
+
+.hate-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--hate-color);
+    padding: var(--container-padding);
+    width: 45%;
+    margin: auto;
+    color: var(--love-color);
+    border-radius: var(--border-radius);
+    outline: var(--outline-container) var(--love-color);
+}
+
+@media all and (max-width:800px) {
+    h1 {
+        margin: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 4%;
+    }
+
+    .love-container, .hate-container {
+        width: 100%;
+        margin: 4% 0;
+    }
+}
+
+.btn {
+    background-color: var(--hate-color);
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1em;
+    height: 2.2em;
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius); 
+    letter-spacing: 0.09em;
+}
+
+.request-complement {
+    color: var(--love-color);
+}
+
+.request-insult {
+    background-color: var(--love-color);
+}
+
+.request-complement:hover {
+    background-color: var(--love-color);
+    color: var(--hate-color);
+    outline: 1px solid var(--hate-color);
+}
+
+.request-complement:active {
+    background-color: rgb(219, 219, 219);
+}
+
+.request-insult:hover {
+    background-color: var(--hate-color);
+    color: var(--love-color);
+    outline: 1px solid var(--love-color);
+}
+
+.request-insult:active {
+    background-color: rgb(219, 219, 219);
+    color: var(--hate-color);
+}
